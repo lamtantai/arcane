@@ -26,8 +26,8 @@ export default function CharacterCard({
   const [blur, setBlur] = useState(0);
 
   const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
-  const scale = useTransform(progress, range, [1, 0.3]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
+  const scale = useTransform(progress, range, [1, 0.75]);
 
   const blurTransform = useTransform(progress, range, [0, 20]);
 
@@ -53,8 +53,8 @@ export default function CharacterCard({
           // transform: `scale3d(${scale.current}, ${scale.current}, ${scale.current})`,
           scale,
           filter: `blur(${blur}px)`,
+          // transform: `translate(0px, ${translateY.current}px) scale(${scale.current})`,
         }}
-        transition={{ duration: 0.8 }}
       >
         {/* CHARACTER IMAGE CONTAINER */}
         <div className='flex flex-col justify-center gap-[2vh] w-full h-full md:w-[55%]'>
@@ -66,7 +66,6 @@ export default function CharacterCard({
                 scale: imageScale,
                 opacity,
               }}
-              transition={{ duration: 0.5 }}
             >
               <Image
                 src={imageSrc}

@@ -1,6 +1,5 @@
 'use client';
 import Content from './components/content';
-import Footer from './components/footer';
 import HeroSection from './components/hero';
 import { ReactLenis, useLenis } from 'lenis/react';
 
@@ -18,7 +17,6 @@ export default function Home() {
       <main className='relative h-full w-full'>
         <HeroSection />
         <Content />
-        <Footer />
       </main>
     </Layout>
   );
