@@ -2,13 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  motion,
-  useScroll,
-  useTransform,
-  cubicBezier,
-  useSpring,
-} from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import CardContainer from './characters-card-container';
 import { scale3D, scaleAnimate, slideUp, splitText } from '../lib/animate';
 import { useRef } from 'react';
