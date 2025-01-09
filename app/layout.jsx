@@ -2,9 +2,6 @@ import './globals.css';
 import localFont from 'next/font/local';
 import { Inter } from 'next/font/google';
 
-import Header from './components/header';
-import Footer from './components/footer';
-
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -39,9 +36,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${zentry.variable} ${roobert.variable} ${manuka.variable} ${inter.className} antialiased bg-primary`}
       >
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );
